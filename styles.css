@@ -12,7 +12,7 @@
   --paper:    #EFEDE9;
   --paper-2:  #E3E0D9;
   --chrome:   #A9B0B7;
-  --mute:     #6E7681;
+  --mute:     #595F69;   /* 4.9:1 on --paper-2, 5.5:1 on --paper — WCAG AA at 11.5px */
   --red:      #C4162C;
   --red-hot:  #E01E37;
   --amber:    #EFB01F;
@@ -39,7 +39,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* Keyboard skip link — visually hidden until it receives focus, so a
+   keyboard or screen-reader user can jump the nav on every page. */
+.skiplink {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--red); color: #fff; padding: 12px 18px;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .08em;
+  text-transform: uppercase; text-decoration: none;
+}
+.skiplink:focus { left: 0; }
+
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 
 h1, h2, h3, h4 {
@@ -109,7 +119,7 @@ p:last-child { margin-bottom: 0; }
   display: flex; align-items: center; gap: 16px;
   min-height: 74px;
 }
-.masthead__logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+.masthead__logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; flex-shrink: 0; }
 .masthead__logo img { height: 46px; width: auto; }
 .masthead__name {
   font-family: var(--display); font-weight: 800; font-size: 15px;
@@ -117,11 +127,11 @@ p:last-child { margin-bottom: 0; }
 }
 .masthead__name span {
   display: block; font-family: var(--mono); font-weight: 400;
-  font-size: 10.5px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--chrome); white-space: nowrap;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--chrome); white-space: nowrap;
 }
-.nav { display: flex; align-items: center; gap: 18px; }
+.nav { display: flex; align-items: center; gap: 12px; }
 .nav a {
-  font-family: var(--display); font-weight: 600; font-size: 14px;
+  font-family: var(--display); font-weight: 600; font-size: 13.5px;
   color: var(--paper); text-decoration: none; padding: 6px 0;
   border-bottom: 2px solid transparent; white-space: nowrap;
 }
@@ -133,6 +143,18 @@ p:last-child { margin-bottom: 0; }
   padding: 7px 11px !important; color: var(--chrome) !important;
 }
 .nav a.langswitch:hover { color: #fff !important; border-color: var(--chrome) !important; }
+
+/* TEMPORARY — form-not-connected notice. Delete this rule and the
+   .formnote blocks in the HTML once YOUR_FORM_ID is replaced. */
+.formnote {
+  background: #FCF3DA; border: 1px solid var(--amber); border-left: 3px solid var(--amber);
+  border-radius: 3px; padding: 16px 18px; margin-bottom: 22px;
+  font-size: 15px; line-height: 1.5;
+}
+.formnote strong { font-family: var(--display); font-weight: 800; }
+.formnote a { font-weight: 600; text-decoration: underline; }
+
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* photo gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 36px; }
@@ -378,11 +400,14 @@ p:last-child { margin-bottom: 0; }
 .pagehead p { color: var(--chrome); font-size: clamp(16px, 1.9vw, 19px); max-width: 60ch; margin-top: 18px; }
 
 /* --- responsive --------------------------------------------------------- */
-@media (max-width: 1320px) {
-  html[lang="es"] .masthead__name span { display: none; }
-  html[lang="es"] .nav { gap: 15px; }
-  html[lang="es"] .nav a { font-size: 13.5px; }
+@media (max-width: 1200px) {
+  .masthead__name span { display: none; }
 }
+
+/* Spanish nav labels are longer than the English ones, and the header bar is
+   capped at 1140px, so it never gets extra room no matter how wide the screen.
+   The tagline is what gives way. */
+html[lang="es"] .masthead__name span { display: none; }
 
 @media (max-width: 1080px) {
   .hero__grid, .split, .split--narrow { grid-template-columns: 1fr; }
@@ -448,7 +473,6 @@ p:last-child { margin-bottom: 0; }
 
 @media (max-width: 560px) {
   .foot__grid { grid-template-columns: 1fr; gap: 30px; }
-  .masthead__name span { display: none; }
   .step { grid-template-columns: 40px 1fr; gap: 14px; }
 }
 
@@ -494,6 +518,16 @@ figure.shot--top img { object-position: center 18%; }
 .steps-media .steps { margin-top: 0; }
 .steps-media > figure.shot { position: sticky; top: 104px; }
 .steps-media > figure.shot img { aspect-ratio: 3 / 4; }
+
+/* Full-bleed photos (.photoband, .pagehead--photo) name their image with two
+   custom properties in the markup — --bg for phones, --bg-lg for everything
+   else — so a phone downloads the 700px file instead of the 1400px one.
+   Inline background-image can't be overridden by a media query; a custom
+   property can. */
+.photoband, .pagehead--photo { background-image: var(--bg); }
+@media (min-width: 801px) {
+  .photoband, .pagehead--photo { background-image: var(--bg-lg); }
+}
 
 /* Edge-to-edge photo band with a line of text over it. */
 .photoband {

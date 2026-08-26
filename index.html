@@ -10,11 +10,22 @@
 <link rel="alternate" hreflang="es" href="https://arevalosautorepair.com/es/index.html">
 <link rel="alternate" hreflang="x-default" href="https://arevalosautorepair.com/">
 <link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/hero-wall-800.jpg" media="(max-width: 800px)">
+<link rel="preload" as="image" href="assets/hero-wall-1280.jpg" media="(min-width: 801px) and (max-width: 1280px)">
+<link rel="preload" as="image" href="assets/hero-wall-1920.jpg" media="(min-width: 1281px)">
+<meta property="og:site_name" content="Arevalo&#39;s Auto Repair">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Transmission Repair &amp; Rebuilds in Irving, TX | Arevalo's Auto Repair">
 <meta property="og:description" content="Ford, Chevy and Ram transmission rebuilds in Irving, TX. Free diagnostic, free local towing, 6-month warranty.">
-<meta property="og:type" content="website">
 <meta property="og:url" content="https://arevalosautorepair.com/">
-<meta property="og:image" content="https://arevalosautorepair.com/assets/logo-640.png">
+<meta property="og:image" content="https://arevalosautorepair.com/assets/shop-2.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="1050">
+<meta property="og:image:alt" content="The wall of rebuilt transmissions at Arevalo's Auto Repair in Irving, Texas">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,9 +34,16 @@
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
+  "@id": "https://arevalosautorepair.com/#business",
   "name": "Arevalo's Auto Repair",
   "url": "https://arevalosautorepair.com/",
-  "image": "https://arevalosautorepair.com/assets/logo-640.png",
+  "image": [
+    "https://arevalosautorepair.com/assets/shop-2.jpg",
+    "https://arevalosautorepair.com/assets/shop-1.jpg",
+    "https://arevalosautorepair.com/assets/shop-4.jpg"
+  ],
+  "logo": "https://arevalosautorepair.com/assets/logo-640.png",
+  "hasMap": "https://www.google.com/maps?cid=8593300856004174944",
   "telephone": "+1-214-718-8587",
   "contactPoint": { "@type": "ContactPoint", "telephone": "+1-469-350-6499", "contactType": "customer service" },
   "email": "arevalostransmission@gmail.com",
@@ -56,11 +74,12 @@
 </script>
 </head>
 <body>
+<a class="skiplink" href="#main">Skip to content</a>
 
 <header class="masthead">
   <div class="wrap masthead__bar">
     <a class="masthead__logo" href="index.html">
-      <img src="assets/logo-320.png" alt="Arevalo's Auto Repair">
+      <img src="assets/logo-200.png" width="200" height="161" alt="Arevalo's Auto Repair">
       <span class="masthead__name">Arevalo's Auto Repair<span>Transmission Specialists · Irving, TX</span></span>
     </a>
     <button class="navtoggle" aria-expanded="false" aria-controls="nav">MENU</button>
@@ -76,7 +95,7 @@
   </div>
 </header>
 
-<section class="hero">
+<section id="main" class="hero">
   <div class="wrap hero__grid">
     <div>
       <p class="eyebrow on-dark">505 E Irving Blvd · Irving, TX · 20+ years</p>
@@ -149,7 +168,7 @@
           <a class="btn btn--call" href="tel:+12147188587">Free diagnostic — call now</a>
         </div>
         <figure class="shot shot--wide" style="margin-top:32px">
-          <img src="assets/shop-1.jpg" alt="Ford trucks and a work van up on the lifts at Arevalo's Auto Repair in Irving, Texas" loading="lazy">
+          <img src="assets/shop-1.jpg" srcset="assets/shop-1-700.jpg 700w, assets/shop-1.jpg 1400w" sizes="(min-width: 1140px) 560px, (min-width: 760px) 50vw, 100vw" width="1400" height="1050" alt="Ford trucks and a work van up on the lifts at Arevalo's Auto Repair in Irving, Texas" loading="lazy">
           <figcaption>Four bays on E Irving Blvd</figcaption>
         </figure>
       </div>
@@ -205,7 +224,7 @@
       </div>
     </div>
     <figure class="shot">
-      <img src="assets/shop-3.jpg" alt="Freshly rebuilt transmission on a stand in front of the Arevalo's Auto Repair banner" loading="lazy">
+      <img src="assets/shop-3.jpg" srcset="assets/shop-3-700.jpg 700w, assets/shop-3.jpg 1400w" sizes="(min-width: 1140px) 560px, (min-width: 760px) 50vw, 100vw" width="1400" height="1050" alt="Freshly rebuilt transmission on a stand in front of the Arevalo's Auto Repair banner" loading="lazy">
       <figcaption>Rebuilt, tagged and ready to go back in</figcaption>
     </figure>
     </div>
@@ -219,37 +238,41 @@
     <p class="lede" style="margin-top:16px">Excerpts from Google and Yelp reviews. Read all of them and leave your own at the links below.</p>
 
     <!-- ==========================================================
-         REVIEWS — VERIFY BEFORE GOING LIVE.
-         These excerpts came from third-party review aggregators, so
-         confirm each one against your live Google/Yelp profile and
-         replace with the customer's exact wording plus their real
-         first name, last initial and date.
+         REVIEWS — verbatim from the shop's own Google profile
+         (google.com/maps?cid=8593300856004174944), read 2026-08-26.
+         Quotes are exact; the TEXAS TOPLINE MOTORS one is trimmed at a
+         sentence break. Google shows relative dates ("a year ago"), so
+         no date is cited rather than guess one — add real dates if you
+         pull them from the Business Profile dashboard.
+         Do not paraphrase a review and attribute it to Google.
          To add another: copy one <div class="quote"> block.
          ========================================================== -->
     <div class="quotes">
       <div class="quote">
-        <p>Brought in a 2021 Ford Transit for a construction company. Another shop quoted a long wait; the tow from Arlington showed up inside the hour and the van was turned around fast.</p>
-        <cite>Google review · Work van owner</cite>
+        <p>We dropped off a 2018 Silverado with a defective transmission Saturday and it was rebuilt and ready to go by Wednesday. It drives like new.</p>
+        <cite>Texas Topline Motors · Google</cite>
       </div>
       <div class="quote">
-        <p>Work van broke down and one Irving shop wanted far more money and up to ten weeks for parts. Arevalo's quoted less, said one week, and the van runs smooth. No extra charges.</p>
-        <cite>Google review · Work van owner</cite>
+        <p>They took care of our truck very fast. Rebuilt transmission and ready to go in 3 days. My boss is very happy with their service. It takes a lot to make him happy but he spoke highly of this shop.</p>
+        <cite>Carlos Choto · Google</cite>
       </div>
       <div class="quote">
-        <p>Very friendly and courteous, and very good work. It's a family business and I respect that.</p>
-        <cite>Hamid N. · Yelp · March 2025</cite>
+        <p>Great service, everyone was so nice, Ricky made the diagnosis and repair, and the price was far lower than other places wanted to charge me. I'll take all my business to Arevalos from now on.</p>
+        <cite>Steve Cox · Google</cite>
       </div>
     </div>
 
     <div class="btn-row" style="margin-top:30px">
-      <!-- Paste your Google review link here. Get it from your Google Business
-           Profile: Read reviews -> Get more reviews -> copy link. -->
-      <a class="btn btn--call" href="REPLACE_WITH_GOOGLE_REVIEW_LINK">Leave a Google review</a>
+      <!-- Canonical Google profile link for this business (CID 8593300856004174944).
+           Verified working. When you have the short "get more reviews" link from
+           the Business Profile dashboard (looks like https://g.page/r/.../review),
+           swap it in here and in es/index.html — it opens the star picker directly. -->
+      <a class="btn btn--call" href="https://www.google.com/maps?cid=8593300856004174944">Leave a Google review</a>
       <a class="btn btn--ghost" href="https://www.yelp.com/biz/arevalos-auto-repair-irving">Read reviews on Yelp</a>
     </div>
 
     <figure class="shot shot--wide" style="margin-top:34px">
-      <img src="assets/shop-4.jpg" alt="The Arevalo's Auto Repair crew inside the shop in Irving, Texas" loading="lazy">
+      <img src="assets/shop-4.jpg" srcset="assets/shop-4-700.jpg 700w, assets/shop-4.jpg 1400w" sizes="(min-width: 1140px) 560px, (min-width: 760px) 50vw, 100vw" width="1400" height="1050" alt="The Arevalo's Auto Repair crew inside the shop in Irving, Texas" loading="lazy">
       <figcaption>The crew that does the work</figcaption>
     </figure>
 
@@ -264,7 +287,7 @@
 
 <!-- Full-bleed photo band. Swap the background by changing the inline
      style below to any file in assets/. -->
-<section class="photoband" style="background-image:url('assets/shop-2.jpg')">
+<section class="photoband" style="--bg:url('assets/shop-2-700.jpg');--bg-lg:url('assets/shop-2.jpg')">
   <div class="wrap">
     <p class="eyebrow on-dark">Inside the shop</p>
     <h2>Rows of cores, four bays, one address.</h2>
@@ -286,7 +309,7 @@
           <li><strong>Hours</strong>Monday–Friday 8:00 AM – 6:00 PM<br>Saturday 9:00 AM – 4:00 PM<br>Sunday closed</li>
         </ul>
         <figure class="shot shot--wide shot--top" style="margin-top:26px">
-          <img src="assets/shop-5.jpg" alt="Customer waiting area at Arevalo's Transmission in Irving, Texas" loading="lazy">
+          <img src="assets/shop-5.jpg" srcset="assets/shop-5-700.jpg 700w, assets/shop-5.jpg 1400w" sizes="(min-width: 1140px) 560px, (min-width: 760px) 50vw, 100vw" width="1400" height="1866" alt="Customer waiting area at Arevalo's Transmission in Irving, Texas" loading="lazy">
           <figcaption>Somewhere to sit while we look at it</figcaption>
         </figure>
       </div>
@@ -314,7 +337,7 @@
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <img src="assets/logo-320.png" alt="Arevalo's Auto Repair">
+        <img src="assets/logo-200.png" width="200" height="161" alt="Arevalo's Auto Repair">
         <p>Transmission rebuilds for Ford, Chevy and Ram in Irving, Texas. Rebuilt in-house, warrantied, and priced before we start.</p>
       </div>
       <div>

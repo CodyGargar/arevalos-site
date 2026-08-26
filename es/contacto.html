@@ -10,19 +10,30 @@
 <link rel="alternate" hreflang="en" href="https://arevalosautorepair.com/contact.html">
 <link rel="alternate" hreflang="x-default" href="https://arevalosautorepair.com/contact.html">
 <link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Arevalo&#39;s Auto Repair">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Contacto y Presupuesto Gratis | Arevalo's Auto Repair, Irving TX">
 <meta property="og:description" content="Llame al 214-718-8587 o mándenos año, marca, modelo y los síntomas para un presupuesto gratis. 505 E Irving Blvd, Irving, TX 75060. Lun–Vie 8–6, Sáb 9–4. Hablamos español.">
+<meta property="og:url" content="https://arevalosautorepair.com/es/contacto.html">
+<meta property="og:image" content="https://arevalosautorepair.com/assets/shop-5.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="1866">
+<meta property="og:image:alt" content="La sala de espera de Arevalo's Auto Repair, 505 E Irving Blvd">
 <meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+<a class="skiplink" href="#main">Saltar al contenido</a>
 <header class="masthead">
   <div class="wrap masthead__bar">
     <a class="masthead__logo" href="index.html">
-      <img src="../assets/logo-320.png" alt="Arevalo's Auto Repair">
+      <img src="../assets/logo-200.png" width="200" height="161" alt="Arevalo's Auto Repair">
       <span class="masthead__name">Arevalo's Auto Repair<span>Especialistas en Transmisiones · Irving, TX</span></span>
     </a>
     <button class="navtoggle" aria-expanded="false" aria-controls="nav">MENÚ</button>
@@ -38,7 +49,7 @@
   </div>
 </header>
 
-<section class="pagehead pagehead--photo" style="background-image:url('../assets/shop-5.jpg')">
+<section id="main" class="pagehead pagehead--photo" style="--bg:url('../assets/shop-5-700.jpg');--bg-lg:url('../assets/shop-5.jpg')">
   <div class="wrap">
     <p class="eyebrow on-dark">Presupuesto gratis · Diagnóstico gratis</p>
     <h1>Díganos qué está haciendo</h1>
@@ -57,11 +68,22 @@
         <p class="eyebrow">Pedir presupuesto</p>
         <h2 style="font-size:clamp(28px,3.6vw,42px)">Mándenos los detalles</h2>
         <p class="lede" style="margin-top:16px;margin-bottom:26px">Entre más nos diga, más cercano sale el estimado. Si no camina, avísenos — la grúa es gratis hasta 15 millas cuando hacemos el trabajo mayor.</p>
+        <!-- TEMPORAL — borre este bloque cuando reemplace YOUR_FORM_ID abajo. -->
+        <div class="formnote">
+          <strong>Este formulario todavía no está conectado.</strong> Mientras tanto, llame al
+          <a href="tel:+12147188587">214-718-8587</a> o escriba a
+          <a href="mailto:arevalostransmission@gmail.com">arevalostransmission@gmail.com</a>
+          y le contestamos.
+        </div>
         <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Presupuesto desde arevalosautorepair.com">
+          <input type="hidden" name="_next" value="https://arevalosautorepair.com/es/gracias.html">
+          <!-- honeypot: bots fill this, people never see it -->
+          <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
           <input type="hidden" name="_language" value="es">
-          <div class="field"><label for="c-name">Nombre</label><input id="c-name" name="name" type="text" required></div>
-          <div class="field"><label for="c-phone">Teléfono</label><input id="c-phone" name="phone" type="tel" required></div>
-          <div class="field"><label for="c-email">Correo</label><input id="c-email" name="email" type="email"></div>
+          <div class="field"><label for="c-name">Nombre</label><input id="c-name" name="name" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="c-phone">Teléfono</label><input id="c-phone" name="phone" type="tel" required autocomplete="tel"></div>
+          <div class="field"><label for="c-email">Correo</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
           <div class="field"><label for="c-vehicle">Año, marca y modelo</label><input id="c-vehicle" name="vehicle" type="text" placeholder="Ford F-150 2015, motor 5.0" required></div>
           <div class="field"><label for="c-drivable">¿Todavía camina?</label>
             <select id="c-drivable" name="drivable"><option>Sí, todavía camina</option><option>Apenas / no es seguro manejarla</option><option>No, no se mueve</option></select></div>
@@ -79,7 +101,7 @@
           <li><strong>Atendemos</strong>Irving, Las Colinas, Dallas, Grand Prairie, Farmers Branch, Coppell, Arlington y todo el área</li>
         </ul>
         <figure class="shot shot--wide shot--top" style="margin-top:24px">
-          <img src="../assets/shop-5.jpg" alt="Sala de espera de Arevalo's Transmission, 505 E Irving Blvd" loading="lazy">
+          <img src="../assets/shop-5.jpg" srcset="../assets/shop-5-700.jpg 700w, ../assets/shop-5.jpg 1400w" sizes="(min-width: 1140px) 560px, (min-width: 760px) 50vw, 100vw" width="1400" height="1866" alt="Sala de espera de Arevalo's Transmission, 505 E Irving Blvd" loading="lazy">
           <figcaption>Así se ve cuando entra</figcaption>
         </figure>
         <div class="map" style="margin-top:24px">
@@ -107,7 +129,7 @@
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <img src="../assets/logo-320.png" alt="Arevalo's Auto Repair">
+        <img src="../assets/logo-200.png" width="200" height="161" alt="Arevalo's Auto Repair">
         <p>Reconstrucción de transmisiones para Ford, Chevy y Ram en Irving, Texas. Hecho aquí en el taller, con garantía y con el precio dado antes de empezar.</p>
       </div>
       <div>

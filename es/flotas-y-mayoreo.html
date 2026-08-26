@@ -10,19 +10,30 @@
 <link rel="alternate" hreflang="en" href="https://arevalosautorepair.com/fleet.html">
 <link rel="alternate" hreflang="x-default" href="https://arevalosautorepair.com/fleet.html">
 <link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Arevalo&#39;s Auto Repair">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Transmisiones al Mayoreo y para Flotas | Arevalo's Auto Repair, Irving TX">
 <meta property="og:description" content="Reconstrucción de transmisiones al mayoreo para talleres, lotes de carros usados y flotas en Irving y Dallas. Precio de mayoreo, garantía de 6 meses, grúa gratis 15 millas.">
+<meta property="og:url" content="https://arevalosautorepair.com/es/flotas-y-mayoreo.html">
+<meta property="og:image" content="https://arevalosautorepair.com/assets/shop-1.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="1050">
+<meta property="og:image:alt" content="Camionetas y vans de trabajo en los elevadores de Arevalo's Auto Repair">
 <meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+<a class="skiplink" href="#main">Saltar al contenido</a>
 <header class="masthead">
   <div class="wrap masthead__bar">
     <a class="masthead__logo" href="index.html">
-      <img src="../assets/logo-320.png" alt="Arevalo's Auto Repair">
+      <img src="../assets/logo-200.png" width="200" height="161" alt="Arevalo's Auto Repair">
       <span class="masthead__name">Arevalo's Auto Repair<span>Especialistas en Transmisiones · Irving, TX</span></span>
     </a>
     <button class="navtoggle" aria-expanded="false" aria-controls="nav">MENÚ</button>
@@ -38,7 +49,7 @@
   </div>
 </header>
 
-<section class="pagehead pagehead--photo" style="background-image:url('../assets/shop-1.jpg')">
+<section id="main" class="pagehead pagehead--photo" style="--bg:url('../assets/shop-1-700.jpg');--bg-lg:url('../assets/shop-1.jpg')">
   <div class="wrap">
     <p class="eyebrow on-dark">Para talleres, lotes y flotas</p>
     <h1>Mándenos la transmisión. Quédese con el cliente.</h1>
@@ -62,7 +73,7 @@
     </div>
 
     <figure class="shot shot--wide" style="margin-top:36px">
-      <img src="../assets/shop-1.jpg" alt="Vans de trabajo y camionetas en los elevadores de Arevalo's Auto Repair en Irving, Texas" loading="lazy">
+      <img src="../assets/shop-1.jpg" srcset="../assets/shop-1-700.jpg 700w, ../assets/shop-1.jpg 1400w" sizes="(min-width: 1140px) 560px, (min-width: 760px) 50vw, 100vw" width="1400" height="1050" alt="Vans de trabajo y camionetas en los elevadores de Arevalo's Auto Repair en Irving, Texas" loading="lazy">
       <figcaption>Camionetas de trabajo en las rampas casi todos los días</figcaption>
     </figure>
   </div>
@@ -115,12 +126,23 @@
           <li><strong>Horario</strong>Lun–Vie 8–6 · Sáb 9–4</li>
         </ul>
       </div>
+        <!-- TEMPORAL — borre este bloque cuando reemplace YOUR_FORM_ID abajo. -->
+        <div class="formnote">
+          <strong>Este formulario todavía no está conectado.</strong> Mientras tanto, llame al
+          <a href="tel:+12147188587">214-718-8587</a> o escriba a
+          <a href="mailto:arevalostransmission@gmail.com">arevalostransmission@gmail.com</a>
+          y le contestamos.
+        </div>
       <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Flotas / mayoreo desde arevalosautorepair.com">
+          <input type="hidden" name="_next" value="https://arevalosautorepair.com/es/gracias.html">
+          <!-- honeypot: bots fill this, people never see it -->
+          <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
         <input type="hidden" name="_language" value="es">
-        <div class="field"><label for="w-biz">Nombre del negocio</label><input id="w-biz" name="business" type="text" required></div>
-        <div class="field"><label for="w-name">Su nombre</label><input id="w-name" name="name" type="text" required></div>
-        <div class="field"><label for="w-phone">Teléfono</label><input id="w-phone" name="phone" type="tel" required></div>
-        <div class="field"><label for="w-email">Correo</label><input id="w-email" name="email" type="email" required></div>
+        <div class="field"><label for="w-biz">Nombre del negocio</label><input id="w-biz" name="business" type="text" required autocomplete="organization"></div>
+        <div class="field"><label for="w-name">Su nombre</label><input id="w-name" name="name" type="text" required autocomplete="name"></div>
+        <div class="field"><label for="w-phone">Teléfono</label><input id="w-phone" name="phone" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="w-email">Correo</label><input id="w-email" name="email" type="email" required autocomplete="email"></div>
         <div class="field"><label for="w-type">Tipo de negocio</label>
           <select id="w-type" name="business_type"><option>Taller</option><option>Lote de carros usados</option><option>Flota / contratista</option><option>Grúa</option><option>Otro</option></select></div>
         <div class="field"><label for="w-note">Qué transmisiones ve más, o un trabajo que tenga ahorita</label>
@@ -146,7 +168,7 @@
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <img src="../assets/logo-320.png" alt="Arevalo's Auto Repair">
+        <img src="../assets/logo-200.png" width="200" height="161" alt="Arevalo's Auto Repair">
         <p>Reconstrucción de transmisiones para Ford, Chevy y Ram en Irving, Texas. Hecho aquí en el taller, con garantía y con el precio dado antes de empezar.</p>
       </div>
       <div>
