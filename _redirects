@@ -1,0 +1,22 @@
+# Netlify redirects — keeps the old Astro URLs alive after the switch.
+# Without this, every link, bookmark and Google-indexed page from the old
+# site returns 404 and you lose whatever ranking those pages had.
+
+/about            /services.html            301
+/services         /transmission-repair.html 301
+/contact          /contact.html             301
+/gallery          /index.html               301
+/blog             /index.html               301
+/blog/*           /index.html               301
+
+# Vanity URLs — short, easy to say on the phone or print on a card.
+/transmission     /transmission-repair.html 301
+/transmissions    /transmission-repair.html 301
+/fleet            /fleet.html               301
+/wholesale        /fleet.html               301
+/quote            /contact.html             301
+
+# Spanish
+/es                    /es/index.html                          301
+/espanol               /es/index.html                          301
+/transmisiones         /es/reparacion-de-transmisiones.html    301

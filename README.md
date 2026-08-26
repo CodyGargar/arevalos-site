@@ -1,0 +1,173 @@
+# Arevalo's Auto Repair — new site
+
+Plain HTML/CSS/JS. No build step, no framework, no vendor lock-in. Any host that serves
+static files will run it.
+
+```
+index.html                 Home
+transmission-repair.html   Main money page — this is what should rank
+fleet.html                 Wholesale / fleet / dealer accounts
+services.html              Other services + about
+contact.html               Quote form, hours, map
+styles.css                 All styling (change colors in one place at the top)
+site.js                    Mobile menu
+assets/                    Logo (background removed) + favicon
+robots.txt, sitemap.xml    For Google
+_redirects, vercel.json    Old-URL redirects (see below)
+build-es.py                Regenerates the Spanish pages (only if you want to)
+
+es/index.html                        Inicio
+es/reparacion-de-transmisiones.html  Transmisiones (Spanish money page)
+es/flotas-y-mayoreo.html             Flotas y mayoreo
+es/otros-servicios.html              Otros servicios
+es/contacto.html                     Contacto
+```
+
+## The Spanish site
+
+Full mirror at `/es/`, not a machine translation — written for how customers here
+actually talk (transmisión, grúa, presupuesto, yonke), with "¿Hablan español?" answered
+directly in the FAQ.
+
+Every English page has an **ESPAÑOL** link in the nav and every Spanish page has an
+**ENGLISH** link back. Each pair is connected with `hreflang` tags, so Google shows the
+Spanish page to Spanish-language searchers instead of treating it as duplicate content.
+
+Short URLs: `arevalosautorepair.com/es` and `/transmisiones`.
+
+Both Spanish forms need the same Formspree ID as the English ones. They tag submissions
+with `_language: es` so you know which language the person wrote in.
+
+`build-es.py` is the script that generated those pages. You can ignore it — edit the HTML
+in `es/` directly. Just don't re-run the script after editing, or it overwrites your
+changes.
+
+---
+
+## Before it goes live — 3 things
+
+### 1. Turn on the forms (5 min)
+Both forms post to Formspree, which is free for low volume and needs no server.
+
+1. Sign up at https://formspree.io
+2. Create a form, copy the form ID (looks like `xdorwkjq`)
+3. In `contact.html` and `fleet.html`, replace `YOUR_FORM_ID` with it
+
+Until you do this, the forms will not deliver. The phone links work regardless.
+
+### 2. Photos — DONE
+Five photos are in and resized. The transmission wall is also the homepage hero
+background.
+
+```
+assets/hero-wall-1920.jpg   Hero background, wide screens
+assets/hero-wall-1280.jpg   Hero background, laptops
+assets/hero-wall-800.jpg    Hero background, phones
+assets/shop-1.jpg           Trucks and a work van on the lifts
+assets/shop-2.jpg           The transmission wall
+assets/shop-3.jpg           Rebuilt unit in front of the banner
+assets/shop-4.jpg           The crew
+assets/shop-5.jpg           Waiting room
+```
+
+**To add more:** copy an `<img>` line in the gallery block and name the file
+`shop-6.jpg`, `shop-7.jpg` etc. Resize the long edge to about 1400px first. `site.js`
+hides any file that isn't there, so nothing breaks if you get the name wrong.
+
+**Hero brightness:** the photo sits under a dimming layer in `styles.css` under
+`.hero::before`. Lower the alpha values (`.90`, `.72`, `.34`) to show more of the photo,
+raise them to show less. There's a separate, darker setting for phones further down under
+`@media (max-width: 760px)`.
+
+**Still worth shooting:** the shop exterior with the sign and street visible. It's the
+one shot missing, and it's the photo people use to recognize the place when they pull up.
+
+**Upload the same five to your Google Business Profile.** That's where they do the most
+work — more than on this site.
+
+### 3. Consider a better email address
+`arevalostransmission@gmail.com` works but costs you credibility on a $3,000 job. A Google
+Workspace mailbox at `service@arevalosautorepair.com` is about $7/month and forwards
+anywhere. Update it in all 5 HTML files if you change it.
+
+---
+
+## Deploying
+
+**Easiest — Netlify Drop (free, 2 minutes)**
+1. Go to https://app.netlify.com/drop
+2. Drag this whole folder onto the page
+3. It goes live instantly at a temporary address
+4. Site settings → Domain management → add `arevalosautorepair.com`
+5. Point your domain's DNS at Netlify
+
+**Alternatives:** Cloudflare Pages, Vercel, or GitHub Pages. All free for a site this size.
+
+**Important:** you need access to the domain registrar to point DNS. If the agency that
+built the Astro site registered the domain, get that access before you do anything else —
+otherwise you own the site but not the address it lives at.
+
+---
+
+## What changed and why
+
+| Old site | New site |
+|---|---|
+| "in the heart of Arevalo, Spain" (twice) | Irving, TX — the actual address, in the copy and in schema markup |
+| Zero mentions of "transmission" | Transmission is the entire spine of the site |
+| Every image a gray placeholder | No broken images; photo slots ready when you have real ones |
+| Same 3 paragraphs repeated ~6 times | Each page says one thing once |
+| Four services all linking to one page | Five real pages with distinct jobs |
+| Title: "Arevalo'S Auto Repair \| Home" | Title: "Transmission Repair & Rebuilds in Irving, TX" |
+| Address listed as "Dallas, TX" | 505 E Irving Blvd, Irving, TX 75060 everywhere |
+| "Call Us Now" linked to a contact page | Every call button is a real `tel:` link + sticky call bar on mobile |
+| No hours on Saturday | Sat 9–4 listed and in schema |
+| "Write A Review" linked to itself | Removed until you have the real Google review link |
+| No structured data | LocalBusiness + FAQ schema for Google |
+
+---
+
+## The part that matters more than the website
+
+A new site alone will not fix demand. It's the thing people land on — the Google
+Business Profile is what gets them there. Do these this week:
+
+**Fix the profile**
+- Claim it, set the category to **Transmission Shop** (not "Auto Repair Shop")
+- Address, phone and hours must match this site *character for character*
+- Add every service individually: transmission rebuild, transmission repair,
+  transmission diagnostics, Ford transmission repair, Chevy transmission repair
+- Upload the shop photos
+- Turn on messaging
+- Set the website link to `https://arevalosautorepair.com/transmission-repair.html`
+
+**Fix the other listings**
+Yelp, Manta, MerchantCircle and MapQuest all show slightly different hours (8:00 vs 8:30,
+Saturday closed). Google reads those inconsistencies as a signal the business info is
+unreliable. Make all of them say: **Mon–Fri 8:00–6:00, Sat 9:00–4:00, Sun closed.**
+
+**Get reviews**
+Pull the last 12 months of invoices and text every customer the Google review link:
+
+> Hey [Name], this is Arevalo's Auto Repair — we rebuilt the transmission on your
+> [vehicle] back in [month]. If it's been running well, would you mind leaving a quick
+> Google review? Takes 30 seconds: [link]
+
+Expect 20–30% to convert. Then replace the placeholder review link on the site with the
+real one and add a reviews section to the homepage.
+
+**Then** run Google Ads to `transmission-repair.html`, not to the homepage.
+
+---
+
+## Redirects (already set up)
+
+`_redirects` (Netlify) and `vercel.json` (Vercel) map the old Astro URLs to the new
+pages. Without them, every bookmark, Facebook link and Google-indexed page from the old
+site 404s the day you switch.
+
+Old `/services` points at the new transmission page on purpose — that's where the traffic
+should land now.
+
+You also get short vanity URLs for print and phone calls:
+`arevalosautorepair.com/transmission`, `/fleet`, `/quote`.

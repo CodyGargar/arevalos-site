@@ -1,0 +1,74 @@
+{
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/transmission-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/gallery",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/transmission",
+      "destination": "/transmission-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/transmissions",
+      "destination": "/transmission-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/fleet",
+      "destination": "/fleet.html",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale",
+      "destination": "/fleet.html",
+      "permanent": true
+    },
+    {
+      "source": "/quote",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/es",
+      "destination": "/es/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/espanol",
+      "destination": "/es/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/transmisiones",
+      "destination": "/es/reparacion-de-transmisiones.html",
+      "permanent": true
+    }
+  ]
+}
