@@ -47,7 +47,9 @@ complains about being told a 1-year warranty and getting 6 months.
 - Phone: **214-718-8587** (primary, on all listings) and **469-350-6499**
 - Email: **arevalostransmission@gmail.com**
 - Address: **505 E Irving Blvd, Irving, TX 75060** — Irving, NOT Dallas
-- Hours: **Mon–Fri 8:00–6:00, Sat 9:00–4:00, Sun closed**
+- Hours: **Mon–Fri 8:00–6:00, Sat 9:00–4:00, Sun closed** — ⚠️ **UNRESOLVED, see TODO 5.**
+  The placard on the building reads **Mon–Fri 9:30 AM – 6:00 PM** and lists no
+  Saturday at all. Do not treat the times above as verified until the owner confirms.
 - Rebuilds start at **$1,400**
 - Warranty: **6 months**, parts and labor
 - Diagnostic: **free**
