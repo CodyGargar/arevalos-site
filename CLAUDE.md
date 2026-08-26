@@ -47,9 +47,9 @@ complains about being told a 1-year warranty and getting 6 months.
 - Phone: **214-718-8587** (primary, on all listings) and **469-350-6499**
 - Email: **arevalostransmission@gmail.com**
 - Address: **505 E Irving Blvd, Irving, TX 75060** — Irving, NOT Dallas
-- Hours: **Mon–Fri 8:00–6:00, Sat 9:00–4:00, Sun closed** — ⚠️ **UNRESOLVED, see TODO 5.**
-  The placard on the building reads **Mon–Fri 9:30 AM – 6:00 PM** and lists no
-  Saturday at all. Do not treat the times above as verified until the owner confirms.
+- Hours: **Mon–Fri 8:00–6:00, Sat 9:00–4:00, Sun closed**
+  Confirmed correct by the owner on 2026-08-26. The site and the JSON-LD schema are
+  right. The placard on the building is the thing that is out of date — see TODO 5.
 - Rebuilds start at **$1,400**
 - Warranty: **6 months**, parts and labor
 - Diagnostic: **free**
@@ -139,13 +139,26 @@ ever needed.)
    Khris Nino (original Spanish) plus two marked `traducido` on `es/index.html`.
    Google only exposes relative dates, so no dates are cited — add real ones if you pull
    them from the dashboard. **Never paraphrase a review and attribute it to Google.**
-6. **Missing photo:** exterior of the building with signage and street visible. It's the
-   shot people use to recognize the place. Would go behind the "One shop. Irving Blvd."
-   section and the Contact page header.
-7. **Naming.** The sign, the email, the Facebook page and the waiting-room wall all say
-   "Arevalo's **Transmission**." Only the website says "Auto Repair." If the owner
-   decides to change it, it has to change everywhere at once — site, schema, Google,
-   Yelp, Manta, MerchantCircle, Facebook.
+6. **The sign on the building has the wrong hours.** Nothing to change in this repo —
+   the site and the schema are correct and owner-confirmed. The physical placard,
+   visible in `assets/shopexterior.jpg`, reads **Monday–Friday 9:30 AM – 6:00 PM** and
+   lists **no Saturday at all**. The shop actually opens at 8:00 and is open Saturday
+   9:00–4:00.
+
+   That is 90 minutes of every weekday morning plus the whole of Saturday during which
+   a passer-by believes the shop is shut. For a demand-constrained shop on a main road,
+   a new placard costs less than one rebuild. Google also cross-checks what the
+   storefront says against the profile, so it feeds the listing problem below.
+7. **Naming — there are three variants, not two.** The building sign reads
+   **"Arevalo's Auto & Transmission"** (confirmed from `assets/shopexterior.jpg`), the
+   waiting-room wall reads **"Arevalo's Transmission"**, and the website, all 13 page
+   titles, the schema, the email and the domain say **"Arevalo's Auto Repair."**
+   If the owner picks one, it has to change everywhere at once — site, schema, the two
+   physical signs, Google, Yelp, Manta, MerchantCircle, Facebook.
+
+**Done, kept here so it is not re-opened:** the shop exterior photo that used to be
+listed as missing is in as `assets/shopexterior.jpg`, behind the "One shop. Irving Blvd."
+section on both homepages and as the Contact page header and social card.
 
 ## Off-site work that matters more than this repo
 
