@@ -152,7 +152,13 @@ p:last-child { margin-bottom: 0; }
   font-size: 15px; line-height: 1.5;
 }
 .formnote strong { font-family: var(--display); font-weight: 800; }
-.formnote a { font-weight: 600; text-decoration: underline; }
+.formnote p { margin: 0; }
+/* Its own line and a real 44px box: while the form is dead this is the
+   fallback path, so it has to be thumb-sized. */
+.formnote__link {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-weight: 600; text-decoration: underline; margin-right: 20px;
+}
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
@@ -469,6 +475,47 @@ html[lang="es"] .masthead__name span { display: none; }
   .ticket__row { flex-direction: column; align-items: flex-start; gap: 4px; }
   .ticket__v { text-align: left; }
   .ticket__v small { margin-top: 2px; }
+}
+
+/* --- touch targets ------------------------------------------------------
+   Below 760px everything is being tapped with a thumb, often one-handed in
+   a driveway next to a truck that will not move. Apple's minimum is 44px,
+   Google's is 48. The phone links were 19-24px: the single most important
+   control on a site whose whole job is getting someone to call.
+   Links here are one-per-<li>, so giving them a box does not disturb any
+   paragraph flow.
+
+   Scoped to 1080px to match where the nav collapses, not 760px: an iPad in
+   portrait is 768px, already using the hamburger, and is entirely a touch
+   device. The pointer clause catches touch screens wider than that. */
+@media (max-width: 1080px), (pointer: coarse) {
+  .navtoggle { min-height: 44px; padding: 12px 14px; }
+
+  .infolist a,
+  .foot li a {
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+  /* the second phone number sits after a <br>, so it needs its own box */
+  .infolist br + a { margin-top: 2px; }
+
+  /* the footer list gaps can shrink now that each row is 44px tall */
+  .foot li { margin-bottom: 0; }
+
+  .foot__legal { gap: 10px; }
+  .foot__legal a { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* .card__link lands a pixel under; the two inline tel: links left on the
+     404 sit mid-sentence, so they get a padded box rather than a flex one. */
+  .card__link { display: inline-flex; align-items: center; min-height: 44px; }
+  .taplink { display: inline-block; padding: 12px 0; }
+
+  /* The language switch is a bordered pill with its own !important padding,
+     so it sat at 35px inside the open mobile menu while every sibling was
+     56px. It needs the box set explicitly to win. */
+  .nav a.langswitch {
+    display: inline-flex; align-items: center; box-sizing: border-box;
+    min-height: 44px; padding: 12px 14px !important; align-self: flex-start;
+  }
 }
 
 @media (max-width: 560px) {
