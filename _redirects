@@ -20,3 +20,11 @@
 /es                    /es/index.html                          301
 /espanol               /es/index.html                          301
 /transmisiones         /es/reparacion-de-transmisiones.html    301
+
+# The repo's own notes are not part of the public site. Netlify would happily
+# serve them as static files, so send them to the 404 page instead.
+/README.md        /404.html   404
+/CLAUDE.md        /404.html   404
+
+# The old Astro site's sitemap lived here and is indexed; point it at the real one.
+/sitemap-index.xml  /sitemap.xml  301
