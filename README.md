@@ -49,14 +49,23 @@ directly.
 
 ## Before it goes live — 4 things
 
-### 1. Turn on the forms (5 min)
-Both forms post to Formspree, which is free for low volume and needs no server.
+### 1. Forms — DONE (they use Netlify Forms)
+The four forms post to Netlify, so there is no third-party form service to sign up for
+and nothing to paste in. They only work once the site is deployed to Netlify; opening
+the files locally will not submit.
 
-1. Sign up at https://formspree.io
-2. Create a form, copy the form ID (looks like `xdorwkjq`)
-3. In `contact.html` and `fleet.html`, replace `YOUR_FORM_ID` with it
+  contact.html               form name "quote"     -> thanks.html
+  fleet.html                 form name "fleet"     -> thanks.html
+  es/contacto.html           form name "quote-es"  -> es/gracias.html
+  es/flotas-y-mayoreo.html   form name "fleet-es"  -> es/gracias.html
 
-Until you do this, the forms will not deliver. The phone links work regardless.
+Submissions appear in the Netlify dashboard under **Forms**. Turn on email
+notifications there: Site settings -> Forms -> Form notifications -> add an email.
+**Do that before you send anyone to the site**, or quote requests sit in a dashboard
+nobody is looking at.
+
+The free plan covers 100 submissions a month. The `_gotcha` field is a honeypot wired
+to `data-netlify-honeypot`, so spam bots fill it and get silently dropped.
 
 ### 2. Turn on call tracking (5 min)
 The site's conversion is a phone call. `site.js` already records every phone tap, form

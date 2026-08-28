@@ -68,17 +68,10 @@
         <p class="eyebrow">Pedir presupuesto</p>
         <h2 style="font-size:clamp(28px,3.6vw,42px)">Mándenos los detalles</h2>
         <p class="lede" style="margin-top:16px;margin-bottom:26px">Entre más nos diga, más cercano sale el estimado. Si no camina, avísenos — la grúa es gratis hasta 15 millas cuando hacemos el trabajo mayor.</p>
-        <!-- TEMPORAL — borre este bloque cuando reemplace YOUR_FORM_ID abajo. -->
-        <div class="formnote">
-          <p><strong>Este formulario todavía no está conectado.</strong> Mientras tanto,
-          llámenos o escríbanos y le contestamos.</p>
-          <a class="formnote__link" href="tel:+12147188587">Llame al 214-718-8587</a>
-          <a class="formnote__link" href="mailto:arevalostransmission@gmail.com">arevalostransmission@gmail.com</a>
-        </div>
-        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="hidden" name="_subject" value="Presupuesto desde arevalosautorepair.com">
-          <input type="hidden" name="_next" value="https://arevalosautorepair.com/es/gracias.html">
-          <!-- honeypot: bots fill this, people never see it -->
+        <form class="form" name="quote-es" method="POST" action="/es/gracias.html"
+              data-netlify="true" data-netlify-honeypot="_gotcha">
+          <input type="hidden" name="form-name" value="quote-es">
+          <!-- honeypot, wired to data-netlify-honeypot above -->
           <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
           <input type="hidden" name="_language" value="es">
           <div class="field"><label for="c-name">Nombre</label><input id="c-name" name="name" type="text" required autocomplete="name"></div>

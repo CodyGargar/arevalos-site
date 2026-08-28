@@ -125,11 +125,10 @@ ever needed.)
 1. **GA4 Measurement ID.** `site.js` has `var ANALYTICS_ID = ''`. Until it's filled in
    nothing is measured, and the Google Ads plan in the README can't work. See
    **Measurement** above.
-2. **Formspree ID.** `contact.html`, `fleet.html`, `es/contacto.html`,
-   `es/flotas-y-mayoreo.html` all contain `YOUR_FORM_ID`. Forms don't deliver until it's
-   replaced. Each of those four pages currently shows a `.formnote` callout telling
-   visitors to call instead — **delete those four blocks and the `.formnote` rule in
-   `styles.css` the moment the real ID goes in.**
+2. **Turn on Netlify form notifications.** The forms post to Netlify Forms, so they
+   work with no third-party service — but submissions land in the dashboard silently
+   until someone adds an email under Site settings → Forms → Form notifications.
+   A lead nobody is notified about is the same as a lost lead.
 3. **No website link on the Google Business Profile.** The profile literally offers
    "Add website" — there is no URL on it at all. Nothing else on this list moves as many
    calls as fixing that. Point it at `/transmission-repair.html`.

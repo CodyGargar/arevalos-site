@@ -70,20 +70,10 @@
         <h2 style="font-size:clamp(28px,3.6vw,42px)">Send us the details</h2>
         <p class="lede" style="margin-top:16px;margin-bottom:26px">The more you tell us, the closer the estimate. If it can't be driven, say so — towing is free within 15 miles when we do the major work.</p>
 
-        <!-- FORM SETUP: create a free form at https://formspree.io, then replace
-             YOUR_FORM_ID below with the ID they give you. Until then the form
-             will not deliver. -->
-        <!-- TEMPORARY — delete this block once YOUR_FORM_ID is replaced below. -->
-        <div class="formnote">
-          <p><strong>This form isn't connected yet.</strong> Until it is, call or email and
-          we'll get right back to you.</p>
-          <a class="formnote__link" href="tel:+12147188587">Call 214-718-8587</a>
-          <a class="formnote__link" href="mailto:arevalostransmission@gmail.com">arevalostransmission@gmail.com</a>
-        </div>
-        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="hidden" name="_subject" value="Quote request from arevalosautorepair.com">
-          <input type="hidden" name="_next" value="https://arevalosautorepair.com/thanks.html">
-          <!-- honeypot: bots fill this, people never see it -->
+        <form class="form" name="quote" method="POST" action="/thanks.html"
+              data-netlify="true" data-netlify-honeypot="_gotcha">
+          <input type="hidden" name="form-name" value="quote">
+          <!-- honeypot, wired to data-netlify-honeypot above -->
           <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
           <div class="field">
             <label for="c-name">Name</label>

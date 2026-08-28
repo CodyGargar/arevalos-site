@@ -144,21 +144,6 @@ p:last-child { margin-bottom: 0; }
 }
 .nav a.langswitch:hover { color: #fff !important; border-color: var(--chrome) !important; }
 
-/* TEMPORARY — form-not-connected notice. Delete this rule and the
-   .formnote blocks in the HTML once YOUR_FORM_ID is replaced. */
-.formnote {
-  background: #FCF3DA; border: 1px solid var(--amber); border-left: 3px solid var(--amber);
-  border-radius: 3px; padding: 16px 18px; margin-bottom: 22px;
-  font-size: 15px; line-height: 1.5;
-}
-.formnote strong { font-family: var(--display); font-weight: 800; }
-.formnote p { margin: 0; }
-/* Its own line and a real 44px box: while the form is dead this is the
-   fallback path, so it has to be thumb-sized. */
-.formnote__link {
-  display: inline-flex; align-items: center; min-height: 44px;
-  font-weight: 600; text-decoration: underline; margin-right: 20px;
-}
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
