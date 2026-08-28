@@ -322,6 +322,36 @@
   </div>
 </section>
 
+<!-- ==========================================================
+     PHOTO GALLERY. To add a photo: drop the file in assets/ as
+     shop-6.jpg, resize the long edge to about 1400px, then copy
+     one <img> line below and change the number.
+     site.js probes each file and hides any that is not there, so a
+     wrong filename shows nothing rather than a broken image. If none
+     of them load, the whole section hides itself.
+     ========================================================== -->
+<section class="section gallery-section">
+  <div class="wrap">
+    <p class="eyebrow">Inside the shop</p>
+    <h2 style="font-size:clamp(28px,3.6vw,42px)">Come see where the work happens.</h2>
+    <p class="lede" style="margin-top:16px">Four bays on Irving Blvd, the core wall, and the people who do the rebuilds.</p>
+    <div class="gallery">
+        <img src="assets/shopexterior.jpg" srcset="assets/shopexterior-700.jpg 700w, assets/shopexterior.jpg 1400w"
+             sizes="(min-width: 1140px) 360px, (min-width: 760px) 45vw, 100vw" width="1400" height="1050" alt="The Arevalo&#39;s Auto &amp; Transmission shop front on E Irving Blvd, Irving, Texas" loading="lazy">
+        <img src="assets/shop-1.jpg" srcset="assets/shop-1-700.jpg 700w, assets/shop-1.jpg 1400w"
+             sizes="(min-width: 1140px) 360px, (min-width: 760px) 45vw, 100vw" width="1400" height="1050" alt="Ford trucks and a work van up on the lifts inside the shop" loading="lazy">
+        <img src="assets/shop-2.jpg" srcset="assets/shop-2-700.jpg 700w, assets/shop-2.jpg 1400w"
+             sizes="(min-width: 1140px) 360px, (min-width: 760px) 45vw, 100vw" width="1400" height="1050" alt="The wall of rebuilt transmission cores" loading="lazy">
+        <img src="assets/shop-3.jpg" srcset="assets/shop-3-700.jpg 700w, assets/shop-3.jpg 1400w"
+             sizes="(min-width: 1140px) 360px, (min-width: 760px) 45vw, 100vw" width="1400" height="1050" alt="A freshly rebuilt transmission on a stand in front of the shop banner" loading="lazy">
+        <img src="assets/shop-4.jpg" srcset="assets/shop-4-700.jpg 700w, assets/shop-4.jpg 1400w"
+             sizes="(min-width: 1140px) 360px, (min-width: 760px) 45vw, 100vw" width="1400" height="1050" alt="The Arevalo&#39;s Auto Repair crew inside the shop" loading="lazy">
+        <img class="crop-top" src="assets/shop-5.jpg" srcset="assets/shop-5-700.jpg 700w, assets/shop-5.jpg 1400w"
+             sizes="(min-width: 1140px) 360px, (min-width: 760px) 45vw, 100vw" width="1400" height="1866" alt="The customer waiting area at 505 E Irving Blvd" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <section class="band">
   <div class="wrap">
     <h2>Not sure if it's the transmission?</h2>

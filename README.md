@@ -87,9 +87,15 @@ assets/shop-4.jpg           The crew
 assets/shop-5.jpg           Waiting room
 ```
 
-**To add more:** copy an `<img>` line in the gallery block and name the file
-`shop-6.jpg`, `shop-7.jpg` etc. Resize the long edge to about 1400px first. `site.js`
-hides any file that isn't there, so nothing breaks if you get the name wrong.
+**To add more:** the gallery is the "Come see where the work happens" block near the
+bottom of the homepage. Name the file `shop-6.jpg`, `shop-7.jpg` etc., resize the long
+edge to about 1400px, drop it in `assets/`, then copy one `<img>` line inside
+`<div class="gallery">` and change the number. Do it in **both** `index.html` and
+`es/index.html` so the two homepages stay in step.
+
+`site.js` checks each file and hides any that isn't there, so a wrong filename shows
+nothing rather than a broken image, and if none of them load the whole section hides
+itself.
 
 **Hero brightness:** the photo sits under a dimming layer in `styles.css` under
 `.hero::before`. Lower the alpha values (`.90`, `.72`, `.34`) to show more of the photo,

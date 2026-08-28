@@ -75,6 +75,10 @@ Phone numbers and address also appear in JSON-LD schema in `index.html` and in
     people type into Google. Don't dilute it into generic service copy.
 - Photo components: `figure.shot`, `.steps-media` (sticky photo beside steps),
   `.photoband` (full-bleed with overlaid text), `.pagehead--photo`.
+- **`.gallery-section`** — the photo grid near the bottom of both homepages, and the
+  place new shop photos go. `site.js` probes each file and hides the ones that are not
+  there, so half-finished additions never show a broken image. Keep the two homepages
+  in step when adding one.
 - Every call-to-action must be a real `tel:` link. There's a sticky call bar on mobile.
 
 ## Measurement
