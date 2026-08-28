@@ -3,7 +3,7 @@
 # site returns 404 and you lose whatever ranking those pages had.
 
 /about            /services.html            301
-/services         /transmission-repair.html 301
+/services         /transmission-repair.html 301!   # force: services.html exists and would win
 /contact          /contact.html             301
 /gallery          /index.html               301
 /blog             /index.html               301
@@ -23,8 +23,8 @@
 
 # The repo's own notes are not part of the public site. Netlify would happily
 # serve them as static files, so send them to the 404 page instead.
-/README.md        /404.html   404
-/CLAUDE.md        /404.html   404
+/README.md        /404.html   404!
+/CLAUDE.md        /404.html   404!
 
 # The old Astro site's sitemap lived here and is indexed; point it at the real one.
 /sitemap-index.xml  /sitemap.xml  301
