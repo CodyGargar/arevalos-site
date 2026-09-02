@@ -34,7 +34,7 @@ Every English page has an **ESPAÑOL** link in the nav and every Spanish page ha
 **ENGLISH** link back. Each pair is connected with `hreflang` tags, so Google shows the
 Spanish page to Spanish-language searchers instead of treating it as duplicate content.
 
-Short URLs: `arevalosautorepair.com/es` and `/transmisiones`.
+Short URLs: `arevalostransmissions.com/es` and `/transmisiones`.
 
 Both Spanish forms need the same Formspree ID as the English ones. They tag submissions
 with `_language: es` so you know which language the person wrote in.
@@ -119,7 +119,7 @@ work — more than on this site.
 
 ### 4. Consider a better email address
 `arevalostransmission@gmail.com` works but costs you credibility on a $3,000 job. A Google
-Workspace mailbox at `service@arevalosautorepair.com` is about $7/month and forwards
+Workspace mailbox at `service@arevalostransmissions.com` is about $7/month and forwards
 anywhere. Update it in all 5 HTML files if you change it.
 
 ---
@@ -130,7 +130,7 @@ anywhere. Update it in all 5 HTML files if you change it.
 1. Go to https://app.netlify.com/drop
 2. Drag this whole folder onto the page
 3. It goes live instantly at a temporary address
-4. Site settings → Domain management → add `arevalosautorepair.com`
+4. Site settings → Domain management → add `arevalostransmissions.com`
 5. Point your domain's DNS at Netlify
 
 **Alternatives:** Cloudflare Pages, Vercel, or GitHub Pages. All free for a site this size.
@@ -171,7 +171,7 @@ Business Profile is what gets them there. Do these this week:
   transmission diagnostics, Ford transmission repair, Chevy transmission repair
 - Upload the shop photos
 - Turn on messaging
-- Set the website link to `https://arevalosautorepair.com/transmission-repair.html`
+- Set the website link to `https://arevalostransmissions.com/transmission-repair.html`
 
 **Fix the other listings**
 Yelp, Manta, MerchantCircle and MapQuest all show slightly different hours (8:00 vs 8:30,
@@ -202,4 +202,4 @@ Old `/services` points at the new transmission page on purpose — that's where 
 should land now.
 
 You also get short vanity URLs for print and phone calls:
-`arevalosautorepair.com/transmission`, `/fleet`, `/quote`.
+`arevalostransmissions.com/transmission`, `/fleet`, `/quote`.

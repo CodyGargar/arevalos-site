@@ -152,12 +152,18 @@ ever needed.)
    a passer-by believes the shop is shut. For a demand-constrained shop on a main road,
    a new placard costs less than one rebuild. Google also cross-checks what the
    storefront says against the profile, so it feeds the listing problem below.
-7. **Naming — there are three variants, not two.** The building sign reads
+7. **Naming — there are four variants now.** The building sign reads
    **"Arevalo's Auto & Transmission"** (confirmed from `assets/shopexterior.jpg`), the
-   waiting-room wall reads **"Arevalo's Transmission"**, and the website, all 13 page
-   titles, the schema, the email and the domain say **"Arevalo's Auto Repair."**
+   waiting-room wall reads **"Arevalo's Transmission"**, the website, all 13 page
+   titles and the schema say **"Arevalo's Auto Repair"**, and as of 2026-09-02 the
+   domain is **arevalostransmissions.com** (plural) while the email is
+   **arevalostransmission@gmail.com** (singular).
    If the owner picks one, it has to change everywhere at once — site, schema, the two
    physical signs, Google, Yelp, Manta, MerchantCircle, Facebook.
+
+   The domain no longer matches the page titles. That is survivable — Google does not
+   rank on domain-name match — but the `<title>` tags, the schema `name`, and whatever
+   goes on the Google Business Profile should agree with each other.
 
 **Done, kept here so it is not re-opened:** the shop exterior photo that used to be
 listed as missing is in as `assets/shopexterior.jpg`, behind the "One shop. Irving Blvd."
